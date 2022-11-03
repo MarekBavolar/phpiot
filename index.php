@@ -1,7 +1,7 @@
 <?php 
 
-echo '<h1>xd</h1>';
+echo '<h1>TUKE</h1>';
 
-echo '<p>First web on Azure</p>'
+echo '<p>First web on Azure</p>';
 
-; ?>
+?>
