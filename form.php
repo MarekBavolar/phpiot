@@ -81,13 +81,16 @@ function test_input($data) {
   <br><br>
   <input type="submit" name="submit" value="Submit">
   <br><br>
-  <input type="reset" name="reset" value=$check>  
+  <input type="button" onclick="$check == True" value="Clear the data">  
 </form>
 
 <?php
-if($check){
-  $file2 = fopen("form.txt","a") or die("Unable to open file!");
-  fclose($file2);
+if($check == True){
+  $fp = fopen("/tmp/file.txt", "r+");
+  // clear content to 0 bits
+  ftruncate($fp, 0);
+  //close file
+  fclose($fp);
 }
 $name1 = 'User '. $name . ":" . PHP_EOL ;
 $age = ' Age: '. $age . PHP_EOL;
