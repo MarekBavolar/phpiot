@@ -81,7 +81,7 @@ function test_input($data) {
 <?php
 $file2 = fopen("form.txt","w") or die("Unable to open file!");
 fwrite($file2, $name);
-fwrite($file2, "\n");
+fwrite($file2, '\n');
 fwrite($file2, $email);
 fwrite($file2, $comment);
 fwrite($file2, $gender);
