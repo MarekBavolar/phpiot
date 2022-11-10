@@ -1,7 +1,7 @@
 <?php
 // define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
+$nameErr = $ageErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $age = $email = $gender = $comment = $website = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
@@ -13,7 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $nameErr = "Only letters and white space allowed";
     }
   }
-  
+  if (empty($_POST["age"])) {
+    $ageErr = "Age is required!";
+  } 
   if (empty($_POST["email"])) {
     $emailErr = "Email is required";
   } else {
@@ -55,34 +57,37 @@ function test_input($data) {
 }
 ?>
 
-<h2>PHP Form Validation Example</h2>
+<h2>Job Application</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Name: <input type="text" name="name" value="<?php echo $name;?>">
   <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
-  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-  <span class="error">* <?php echo $emailErr;?></span>
-  <br><br>
-  Website: <input type="text" name="website" value="<?php echo $website;?>">
-  <span class="error"><?php echo $websiteErr;?></span>
-  <br><br>
-  Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+  Age: <input type="int" age="age" value="<?php echo $age;?>">
+  <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
   Gender:
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
   <span class="error">* <?php echo $genderErr;?></span>
+  <br><br>
+  Website: <input type="text" name="website" value="<?php echo $website;?>">
+  <span class="error"><?php echo $websiteErr;?></span>
+  <br><br>
+  Bio: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+  <br><br>
+  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+  <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
 
 <?php
-$name1 = 'User: '. $name . ":" . PHP_EOL ; 
+$name1 = 'User: '. $name . ":" . PHP_EOL ;
+$age = ' Age: '. $age . PHP_EOL;
+$gender1 = ' Gender: '. $gender . PHP_EOL;
 $email1 = ' Email: '. $email . PHP_EOL; 
-$comment1 = ' Comment: '. $comment . PHP_EOL; 
-$gender1 = ' Gender: '. $gender . PHP_EOL; 
+$comment1 = ' Bio: '. $comment . PHP_EOL;  
 $space = "". PHP_EOL; 
 $file2 = fopen("form.txt","a") or die("Unable to open file!");
 fwrite($file2, $name1);
@@ -90,7 +95,7 @@ fwrite($file2, $email1);
 fwrite($file2, $comment1);
 fwrite($file2, $gender1);
 fwrite($file2, $space);
-
+fclose($file2);
 echo "<h2>Your Input:</h2>";
 echo $name;
 echo "<br>";
