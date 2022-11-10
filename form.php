@@ -53,6 +53,12 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+ $file2 = fopen("form.txt","w") or die("Unable to open file!");
+ fwrite($file2, $name);
+ fwrite($file2, $email);
+ fwrite($file2, $comment);
+ fwrite($file2, $gender);
+ fclose($file2);
 ?>
 
 <h2>PHP Form Validation Example</h2>
