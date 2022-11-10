@@ -79,18 +79,15 @@ function test_input($data) {
 </form>
 
 <?php
+$name1 = 'Name: '. $name . PHP_EOL; 
+$email1 = 'Email: '. $name . PHP_EOL; 
+$comment1 = 'Comment: '. $name . PHP_EOL; 
+$gender1 = 'Gender: '. $name . PHP_EOL; 
 $file2 = fopen("form.txt","w") or die("Unable to open file!");
-//fwrite($file2, "Name: ");
-fwrite($file2, $name);
-fwrite($file2, '\n');
-//fwrite($file2, "Email: ");
-fwrite($file2, $email);
-fwrite($file2, '\n');
-//fwrite($file2, "Comment: ");
-fwrite($file2, $comment);
-fwrite($file2, '\n');
-//fwrite($file2, "Gender: ");
-fwrite($file2, $gender);
+fwrite($file2, $name1);
+fwrite($file2, $email1);
+fwrite($file2, $comment1);
+fwrite($file2, $gender1);
 fclose($file2);
 echo "<h2>Your Input:</h2>";
 echo $name;
