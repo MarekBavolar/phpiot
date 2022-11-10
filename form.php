@@ -80,9 +80,9 @@ function test_input($data) {
 
 <?php
 $name1 = 'Name: '. $name . PHP_EOL; 
-$email1 = 'Email: '. $name . PHP_EOL; 
-$comment1 = 'Comment: '. $name . PHP_EOL; 
-$gender1 = 'Gender: '. $name . PHP_EOL; 
+$email1 = 'Email: '. $email . PHP_EOL; 
+$comment1 = 'Comment: '. $comment . PHP_EOL; 
+$gender1 = 'Gender: '. $gender . PHP_EOL; 
 $file2 = fopen("form.txt","w") or die("Unable to open file!");
 fwrite($file2, $name1);
 fwrite($file2, $email1);
