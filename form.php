@@ -79,11 +79,17 @@ function test_input($data) {
   E-mail: <input type="text" name="email" value="<?php echo $email;?>">
   <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
-  <input type="submit" name="submit" value="Submit">  
+  <input type="submit" name="submit" value="Submit">
+  <br><br>
+  <input type="reset" name="reset" value=$check>  
 </form>
 
 <?php
-$name1 = 'User: '. $name . ":" . PHP_EOL ;
+if($check){
+  $file2 = fopen("form.txt","a") or die("Unable to open file!");
+  fclose($file2);
+}
+$name1 = 'User '. $name . ":" . PHP_EOL ;
 $age = ' Age: '. $age . PHP_EOL;
 $gender1 = ' Gender: '. $gender . PHP_EOL;
 $email1 = ' Email: '. $email . PHP_EOL; 
