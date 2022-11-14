@@ -86,7 +86,7 @@ function test_input($data) {
 
 <?php
 if($check == True){
-  $fp = fopen("/tmp/file.txt", "r+");
+  $fp = fopen("/tmp/file.txt", "w");
   // clear content to 0 bits
   ftruncate($fp, 0);
   //close file
