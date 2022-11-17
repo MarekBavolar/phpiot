@@ -116,7 +116,7 @@ function test_input($data) {
 </form>
 <?php
 if(isset($_POST['reset'])){
-  $fp = fopen("/tmp/file.txt", "w");
+  $fp = fopen("form.txt", "w");
   fwrite($fp, PHP_EOL);
   fclose($fp);
 }
