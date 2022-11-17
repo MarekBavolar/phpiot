@@ -2,7 +2,7 @@
 <html>
 <head>
 <style> 
-#example1 {
+body {
   background-image: url(https://vosveteit.zoznam.sk/wp-content/uploads/2019/11/IoT-network-782707.jpg);
   background-position: right bottom, left top;
   background-repeat: no-repeat;
@@ -69,7 +69,6 @@ function test_input($data) {
   return $data;
 }
 ?>
-<div id="example1">
 <h2>Job Application</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
@@ -96,7 +95,6 @@ function test_input($data) {
   <br><br>
   <input type="button" onclick="$check == True" value="Clear the data">  
 </form>
-</div>
 <?php
 if($check == True){
   $fp = fopen("/tmp/file.txt", "w");
