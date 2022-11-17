@@ -2,15 +2,17 @@
 <html>
 <head>
 <style> 
-body {
+.background {
   background-image: url(https://vosveteit.zoznam.sk/wp-content/uploads/2019/11/IoT-network-782707.jpg);
-  background-position: right bottom, left top;
+  background-position: center;
   background-repeat: no-repeat;
-  padding: 15px;
+  background-size: cover;
 }
 </style>
 </head>
 <body>
+<div class = "background">
+</div>
 <?php
 // define variables and set to empty values
 $nameErr = $ageErr = $emailErr = $genderErr = $websiteErr = "";
