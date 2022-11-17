@@ -5,6 +5,7 @@
 .background {
   background-image: url("IoT-network-782707.jpg");
   background-position: center;
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
