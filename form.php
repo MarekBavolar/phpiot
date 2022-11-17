@@ -27,6 +27,10 @@ body, html {
 * {
   box-sizing: border-box;
 }
+.btn_stl {
+  background-color: red;
+  color: black;
+}
 </style>
 </head>
 <body>
@@ -135,10 +139,11 @@ if(isset($_POST['submit'])){
   fwrite($file2, $space);
   fclose($file2);
   echo "Success";
+  echo "<br>";
 }
 ?>
 <form method = "post">
-  <input type="submit" name="reset" value="Clear all">  
+  <input type="submit" class = "btn_stl" name="reset" value="Clear all">  
 </form>
 </div>
 </body>
