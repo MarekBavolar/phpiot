@@ -138,7 +138,7 @@ if(isset($_POST['submit'])){
 }
 ?>
 <form>
-  <input type="submit" name="reset" value="Clear">  
+  <input type="submit" name="reset" value="Clear all">  
 </form>
 </div>
 </body>
