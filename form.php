@@ -141,7 +141,6 @@ if(isset($_POST['submit'])){
   fwrite($file2, $space);
   fclose($file2);
   echo "Success";
-  echo "<br>";
 }
 ?>
 <form method = "post">
