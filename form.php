@@ -134,7 +134,7 @@ fwrite($file2, $comment1);
 fwrite($file2, $gender1);
 fwrite($file2, $space);
 fclose($file2);
-echo "<h2>Data commited succesfully</h2>";
+
 echo $name;
 echo "<br>";
 echo $email;
