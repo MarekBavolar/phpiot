@@ -126,7 +126,7 @@ if(isset($_POST['reset'])){
 }
 if(isset($_POST['submit'])){
   $name1 = 'User '. $name . ":" . PHP_EOL ;
-  $age = ' Age: '. $age . PHP_EOL;
+  $age1 = ' Age: '. $age . PHP_EOL;
   $gender1 = ' Gender: '. $gender . PHP_EOL;
   $website1 = ' Website: '. $website . PHP_EOL;
   $email1 = ' Email: '. $email . PHP_EOL; 
@@ -134,6 +134,7 @@ if(isset($_POST['submit'])){
   $space = "". PHP_EOL; 
   $file2 = fopen("form.txt","a") or die("Unable to open file!");
   fwrite($file2, $name1);
+  fwrite($file2, $age1);
   fwrite($file2, $email1);
   fwrite($file2, $comment1);
   fwrite($file2, $gender1);
