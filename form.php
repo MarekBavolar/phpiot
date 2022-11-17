@@ -3,7 +3,7 @@
 <head>
 <style> 
 .background {
-  background-image: url("https://vosveteit.zoznam.sk/wp-content/uploads/2019/11/IoT-network-782707.jpg");
+  background-image: url(https://vosveteit.zoznam.sk/wp-content/uploads/2019/11/IoT-network-782707.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
