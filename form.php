@@ -2,13 +2,13 @@
 <html>
 <head>
 <style> 
-body {
+body, html {
   background-image: url("IoT-network-782707.jpg");
   background-position: center;
-  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  margin: 0;
 }
 .rectangle {
   background-color: rgb(0,0,0); 
