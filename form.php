@@ -22,6 +22,7 @@ body, html {
   transform: translate(-50%, -50%);
   width: 100%;
   padding: 20px;
+  text-align: left;
 
 }
 </style>
@@ -86,7 +87,7 @@ function test_input($data) {
   return $data;
 }
 ?>
-<h2>Job Application2</h2>
+<h2>Job Application</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Name: <input type="text" name="name" value="<?php echo $name;?>">
@@ -133,7 +134,7 @@ fwrite($file2, $comment1);
 fwrite($file2, $gender1);
 fwrite($file2, $space);
 fclose($file2);
-echo "<h2>Your Input:</h2>";
+echo "<h2>Data commited succesfully</h2>";
 echo $name;
 echo "<br>";
 echo $email;
