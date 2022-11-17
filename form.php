@@ -23,7 +23,9 @@ body, html {
   width: 100%;
   padding: 20px;
   text-align: left;
-
+}
+* {
+  box-sizing: border-box;
 }
 </style>
 </head>
