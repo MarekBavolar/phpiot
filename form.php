@@ -5,7 +5,7 @@
 #example1 {
   background-image: url(https://vosveteit.zoznam.sk/wp-content/uploads/2019/11/IoT-network-782707.jpg);
   background-position: right bottom, left top;
-  background-repeat: no-repeat, repeat;
+  background-repeat: no-repeat;
   padding: 15px;
 }
 </style>
