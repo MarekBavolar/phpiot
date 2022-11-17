@@ -10,9 +10,25 @@ body {
   background-size: cover;
   height: 100%;
 }
+.rectangle {
+  background-color: rgb(0,0,0); /* Fallback color /
+  background-color: rgba(0,0,0, 0.4); / Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+
+}
 </style>
 </head>
 <body>
+<div class = "rectangle">
 <?php
 // define variables and set to empty values
 $nameErr = $ageErr = $emailErr = $genderErr = $websiteErr = "";
@@ -71,7 +87,7 @@ function test_input($data) {
   return $data;
 }
 ?>
-<h2>Job Application1</h2>
+<h2>Job Application2</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Name: <input type="text" name="name" value="<?php echo $name;?>">
@@ -129,6 +145,7 @@ echo $comment;
 echo "<br>";
 echo $gender;
 ?>
+</div>
 </body>
 </html>
 
