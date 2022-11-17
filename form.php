@@ -71,7 +71,7 @@ function test_input($data) {
   return $data;
 }
 ?>
-<h2>Job Application</h2>
+<h2>Job Application1</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Name: <input type="text" name="name" value="<?php echo $name;?>">
