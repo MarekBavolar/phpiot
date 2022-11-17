@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#example1 {
+  background-image: url(https://vosveteit.zoznam.sk/wp-content/uploads/2019/11/IoT-network-782707.jpg);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  padding: 15px;
+}
+</style>
+</head>
+<body>
 <?php
 // define variables and set to empty values
 $nameErr = $ageErr = $emailErr = $genderErr = $websiteErr = "";
