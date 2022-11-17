@@ -113,7 +113,6 @@ function test_input($data) {
   <br><br>
   <input type="submit" name="submit" value="Submit">
   <br><br>
-  <input type="submit" name="reset" value="Clear">  
 </form>
 <?php
 if(isset($_POST['reset'])){
@@ -138,6 +137,9 @@ if(isset($_POST['submit'])){
   echo "Success";
 }
 ?>
+<form>
+  <input type="submit" name="reset" value="Clear">  
+</form>
 </div>
 </body>
 </html>
