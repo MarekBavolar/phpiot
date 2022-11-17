@@ -135,18 +135,8 @@ if(isset($_POST['submit'])){
   fwrite($file2, $gender1);
   fwrite($file2, $space);
   fclose($file2);
+  echo "Success";
 }
-
-
-echo $name;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $website;
-echo "<br>";
-echo $comment;
-echo "<br>";
-echo $gender;
 ?>
 </div>
 </body>
