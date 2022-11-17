@@ -22,7 +22,6 @@ body {
   transform: translate(-50%, -50%);
   width: 100%;
   padding: 20px;
-  text-align: center;
 
 }
 </style>
