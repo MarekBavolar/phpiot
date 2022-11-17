@@ -89,7 +89,7 @@ function test_input($data) {
   return $data;
 }
 ?>
-<h2>Job Application</h2>
+<h2>IoT job application</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Name: <input type="text" name="name" value="<?php echo $name;?>">
@@ -137,7 +137,7 @@ if(isset($_POST['submit'])){
   echo "Success";
 }
 ?>
-<form>
+<form method = "post">
   <input type="submit" name="reset" value="Clear all">  
 </form>
 </div>
