@@ -11,6 +11,7 @@
 </style>
 </head>
 <body>
+<div id="example1">
 <?php
 // define variables and set to empty values
 $nameErr = $ageErr = $emailErr = $genderErr = $websiteErr = "";
@@ -129,3 +130,7 @@ echo $comment;
 echo "<br>";
 echo $gender;
 ?>
+</div>
+</body>
+</html>
+
