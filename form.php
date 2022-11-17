@@ -128,6 +128,7 @@ if(isset($_POST['submit'])){
   $name1 = 'User '. $name . ":" . PHP_EOL ;
   $age = ' Age: '. $age . PHP_EOL;
   $gender1 = ' Gender: '. $gender . PHP_EOL;
+  $website1 = ' Website: '. $website . PHP_EOL;
   $email1 = ' Email: '. $email . PHP_EOL; 
   $comment1 = ' Bio: '. $comment . PHP_EOL;  
   $space = "". PHP_EOL; 
@@ -136,6 +137,7 @@ if(isset($_POST['submit'])){
   fwrite($file2, $email1);
   fwrite($file2, $comment1);
   fwrite($file2, $gender1);
+  fwrite($file2, $website1);
   fwrite($file2, $space);
   fclose($file2);
   echo "Success";
