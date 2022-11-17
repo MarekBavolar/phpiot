@@ -143,6 +143,7 @@ if(isset($_POST['submit'])){
 }
 ?>
 <form method = "post">
+  <br><br>
   <input type="submit" class = "btn_stl" name="reset" value="Clear all">  
 </form>
 </div>
