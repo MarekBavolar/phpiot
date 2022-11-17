@@ -2,7 +2,7 @@
 <html>
 <head>
 <style> 
-.background {
+body {
   background-image: url("IoT-network-782707.jpg");
   background-position: center;
   background-color: black;
@@ -13,8 +13,6 @@
 </style>
 </head>
 <body>
-<div class = "background">
-</div>
 <?php
 // define variables and set to empty values
 $nameErr = $ageErr = $emailErr = $genderErr = $websiteErr = "";
