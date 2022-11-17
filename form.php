@@ -113,29 +113,30 @@ function test_input($data) {
   <br><br>
   <input type="submit" name="submit" value="Submit">
   <br><br>
-  <input type="button" onclick="$check == True" value="Clear the data">  
+  <input type="submit" name="reset" value="Clear">  
 </form>
 <?php
-if($check == True){
+if(isset($_POST['reset'])){
   $fp = fopen("/tmp/file.txt", "w");
-  // clear content to 0 bits
-  ftruncate($fp, 0);
-  //close file
+  fwrite($fp, PHP_EOL);
   fclose($fp);
 }
-$name1 = 'User '. $name . ":" . PHP_EOL ;
-$age = ' Age: '. $age . PHP_EOL;
-$gender1 = ' Gender: '. $gender . PHP_EOL;
-$email1 = ' Email: '. $email . PHP_EOL; 
-$comment1 = ' Bio: '. $comment . PHP_EOL;  
-$space = "". PHP_EOL; 
-$file2 = fopen("form.txt","a") or die("Unable to open file!");
-fwrite($file2, $name1);
-fwrite($file2, $email1);
-fwrite($file2, $comment1);
-fwrite($file2, $gender1);
-fwrite($file2, $space);
-fclose($file2);
+if(isset($_POST['submit'])){
+  $name1 = 'User '. $name . ":" . PHP_EOL ;
+  $age = ' Age: '. $age . PHP_EOL;
+  $gender1 = ' Gender: '. $gender . PHP_EOL;
+  $email1 = ' Email: '. $email . PHP_EOL; 
+  $comment1 = ' Bio: '. $comment . PHP_EOL;  
+  $space = "". PHP_EOL; 
+  $file2 = fopen("form.txt","a") or die("Unable to open file!");
+  fwrite($file2, $name1);
+  fwrite($file2, $email1);
+  fwrite($file2, $comment1);
+  fwrite($file2, $gender1);
+  fwrite($file2, $space);
+  fclose($file2);
+}
+
 
 echo $name;
 echo "<br>";
