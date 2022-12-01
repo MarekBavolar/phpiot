@@ -100,7 +100,7 @@ function test_input($data) {
   <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
   Age: <input type="int" age="age" value="<?php echo $age;?>">
-  <span class="error">* <?php echo $nameErr;?></span>
+  <span class="error">* <?php echo $ageErr;?></span>
   <br><br>
   Gender:
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
