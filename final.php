@@ -7,26 +7,29 @@
     $sn4 = $_GET["operator"];
             
     $text = " a= " . $sn1 . " b= " . $sn2 ." c= " . $sn3;  
-    if($sn4 == "+")
-    {
-        $sum = $sn1 + $sn2 + $sn3;
+    function GET($num1,$num2,$num3,$operator){
+        $sum = 0;
+        if($operator == "+")
+        {
+            $sum = $num1 + $num2 + $num3;
+        }
+        else if($operator == "-")
+        {
+            $sum = $num1 - $num2 - $num3;
+        }
+        else if($operator == "*")
+        {
+            $sum = $num1 * $num2 * $num3;
+        }
+        else if($operator == "/")
+        {
+            $sum = $num1 / $num2 / $num3;
+        }
+        return $sum;
     }
-    else if($sn4 == "-")
-    {
-        $sum = $sn1 - $sn2 - $sn3;
-    }
-    else if($sn4 == "*")
-    {
-        $sum = $sn1 * $sn2 * $sn3;
-    }
-    else if($sn4 == "/")
-    {
-        $sum = $sn1 / $sn2 / $sn3;
-    }
-    
             
     echo $text;
     echo "<br>";
-    echo "Sum:" . $sum;
+    echo "Sum:" . GET($sn1,$sn2,$sn3,$sn4);
     
 ?>
